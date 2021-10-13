@@ -1,0 +1,17 @@
+### build
+
+/build
+/classes
+
+### IntelliJ IDEA
+
+.idea
+*.iml
+
+### library
+
+src/main/webapp/WEB-INF/lib
+
+### Eclipse
+.classpath
+.project
