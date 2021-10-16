@@ -5,14 +5,13 @@ public class CosDTO {
     private String cosLatitude;
     private String cosLongitude;
     private String cosDifficulty;
-    private int cosLength;
+    private String cosLength;
     private String cosTakeTime;
     private String cosLink;
 
 
     public String getCosName() {
         return cosName;
-    }
 
     public void setCosName(String cosName) {
         this.cosName = cosName;
@@ -42,11 +41,14 @@ public class CosDTO {
         this.cosDifficulty = cosDifficulty;
     }
 
-    public int getCosLength() {
+
+    public String getCosLength() {
         return cosLength;
     }
 
-    public void setCosLength(int cosLength) {
+
+    public void setCosLength(String cosLength) {
+
         this.cosLength = cosLength;
     }
 
@@ -65,7 +67,6 @@ public class CosDTO {
     public void setCosLink(String cosLink) {
         this.cosLink = cosLink;
     }
-
 
 
 }
