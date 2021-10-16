@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import service.Action;
 import service.ActionForward;
+import service.cos.GetCosList;
 import service.member.MemberInsert;
 
 @WebServlet("*.do")
@@ -32,6 +33,13 @@ protected void process(HttpServletRequest request, HttpServletResponse response 
 			if(command.equals("/MemberInsert.do")) {
 				try {
 					action = new MemberInsert();
+					forward = action.execute(request, response);
+				}catch(Exception e) {
+					e.printStackTrace();
+				}
+			} else if (command.equals("/GetCosList.do")) {
+				try {
+					action = new GetCosList();
 					forward = action.execute(request, response);
 				}catch(Exception e) {
 					e.printStackTrace();
