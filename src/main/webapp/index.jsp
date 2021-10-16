@@ -7,6 +7,8 @@
 <title>메인 페이지</title>
 </head>
 <body>
- <h2>여기는 메인 페이지입니다. dkdflksjalfdkj</h2>
+ <h2>여기는 메인 페이지입니다. </h2>
+
+ <script>location.href="/GetCosList.do"</script>
 </body>
 </html>

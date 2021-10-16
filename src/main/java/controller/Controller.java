@@ -51,7 +51,7 @@ public class Controller extends HttpServlet {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-        } else if (command.equals("GetCosList.do")) {
+        } else if (command.equals("/GetCosList.do")) {
             try {
                 action = new GetCosList();
                 forward = action.execute(request, response);
