@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import service.Action;
 import service.ActionForward;
+import service.cos.GetCosInfo;
 import service.member.MemberInsert;
 
 @WebServlet("*.do")
@@ -25,7 +26,7 @@ protected void process(HttpServletRequest request, HttpServletResponse response 
 	String contextPath = request.getContextPath();
 	String command = requestURI.substring(contextPath.length());
 	
-	Action  action = null;
+	Action action = null;
 	ActionForward forward = null;
 	
 	// 회원 가입
@@ -34,6 +35,13 @@ protected void process(HttpServletRequest request, HttpServletResponse response 
 					action = new MemberInsert();
 					forward = action.execute(request, response);
 				}catch(Exception e) {
+					e.printStackTrace();
+				}
+			} else if (command.equals("/GetCosInfo.do")){
+				try{
+					action = new GetCosInfo();
+					forward = action.execute(request, response);
+				} catch ( Exception e){
 					e.printStackTrace();
 				}
 			}
