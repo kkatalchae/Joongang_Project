@@ -12,7 +12,6 @@ public class CosDTO {
 
     public String getCosName() {
         return cosName;
-    }
 
     public void setCosName(String cosName) {
         this.cosName = cosName;
