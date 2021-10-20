@@ -22,7 +22,7 @@ public class Controller extends HttpServlet {
 
     private void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        System.out.println("post");
+        System.out.println("process");
 
         String requestURI = request.getRequestURI();
         String contextPath = request.getContextPath();

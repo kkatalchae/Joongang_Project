@@ -49,13 +49,13 @@ public class CosDAO {
             rs = pstmt.executeQuery();
 
             if (rs.next()) {
-                cosDTO.setCosName("cos");
-                cosDTO.setCosLatitude("latitude");
-                cosDTO.setCosLongitude("longitude");
-                cosDTO.setCosDifficulty("difficulty");
-                cosDTO.setCosLength("length");
-                cosDTO.setCosTakeTime("taketime");
-                cosDTO.setCosLink("link");
+                cosDTO.setCosName(rs.getString("cos"));
+                cosDTO.setCosLatitude(rs.getString("latitude"));
+                cosDTO.setCosLongitude(rs.getString("longitude"));
+                cosDTO.setCosDifficulty(rs.getString("difficulty"));
+                cosDTO.setCosLength(rs.getString("length"));
+                cosDTO.setCosTakeTime(rs.getString("taketime"));
+                cosDTO.setCosLink(rs.getString("link"));
             }
         } catch (Exception e) {
             e.printStackTrace();

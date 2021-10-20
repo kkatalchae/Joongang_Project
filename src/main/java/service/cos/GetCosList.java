@@ -52,13 +52,13 @@ public class GetCosList implements Action {
  		request.setAttribute("pageCount", pageCount); //
 		request.setAttribute("startPage", startPage); // 현재 페이지에 표시할 첫 페이지수
 		request.setAttribute("endPage", endPage); // 현재 페이지에 표시할 끝 페이지 수 
-
+		request.setAttribute("listcount", listcount);
 		ActionForward forward = new ActionForward();
 
 		// request 객체로 공유를 한 경우에는 dispatcher방식으로 포워딩이 되어야,
 		// view 페이지에서 공유한 값에 접근할 수 있다.
 		forward.setRedirect(false); // dispatcher 방식으로 포워딩
-		forward.setPath("../../webapp/cos/cos_list.jsp");
+		forward.setPath("/cos/cos_list.jsp");
 
 		return forward;
 	}

@@ -16,11 +16,11 @@
 	<c:forEach var="cos" items="${coslist}">
 		<tr>
 			<td>
-				<a href="/GetCosInfo.do?cosName=${cos.cosName}">${cos.등산코스명}</a>
+				<a href="/GetCosInfo.do?cosName=${cos.cosName}">${cos.cosName}</a>
 			</td>
 			<td>${cos.cosDifficulty}</td>
 			<td>${cos.cosTakeTime}</td>
-			<td>${cos.cosLink}</td>
+			<td><a href="${cos.cosLink}">길찾기</a></td>
 		</tr>
 	</c:forEach>
 
